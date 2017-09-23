@@ -1,8 +1,6 @@
 require 'faraday'
 require 'json'
 
-# 15318530
-
 last_index = 99999
 story_id = ARGV[0].to_i
 puts "Monitoring article with id #{story_id}. Fetching..."
@@ -16,5 +14,5 @@ while true
   else
     puts "No change. Sleeping..."
   end
-  sleep(5)
+  sleep(60)
 end
